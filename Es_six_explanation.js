@@ -191,3 +191,42 @@ console.log(obj3);
 /**
  * Classes
  */
+// Why we need classes everybody know that, because it helps to create
+// as many objects as we want
+
+class Person{
+    //we can have a constructor function to initialize the objects
+    constructor(name){
+        this.name;
+    }
+
+    walk(){
+        console.log('Walk');
+    }
+}
+
+
+const person_obj = new Person("Kushal");
+
+
+//Inheritence
+//It actually helps to inherit the functionalities from a class to another
+class Teacher extends Person{
+    //if we are having a constructor of the sub-class,
+    // then we also have to give a super() call to the parent-class
+    constructor(name,degree){
+        super(name);
+        this.degree ;
+    }
+    teach(){
+        console.log('Teach');
+    }
+}
+
+
+const teacher = new Teacher("Kushal","MCA");
+
+
+console.log(Object.keys(teacher));
+console.log(Object.values(teacher));
+teacher.teach();
