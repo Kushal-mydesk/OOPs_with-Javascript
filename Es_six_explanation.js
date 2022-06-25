@@ -230,3 +230,17 @@ const teacher = new Teacher("Kushal","MCA");
 console.log(Object.keys(teacher));
 console.log(Object.values(teacher));
 teacher.teach();
+
+class Circle{
+    constructor(radius){
+        this.radius = radius;
+    }
+
+    area(){
+        return Math.PI * this.radius*this.radius;
+    }
+}
+
+const circle = new Circle(2);
+const result = circle.area();
+console.log(result.toFixed(2));
